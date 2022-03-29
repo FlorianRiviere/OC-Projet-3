@@ -1,0 +1,14 @@
+header{
+
+    padding: 20px 0 15px 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 8fr 4fr;
+    i{
+        grid-column-start: 2;
+        font-size: large;
+        
+    }
+    img{
+        grid-column-start: 4;
+    }
+}
