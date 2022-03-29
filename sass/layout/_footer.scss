@@ -1,0 +1,27 @@
+footer{
+    background-color: rgb(70, 70, 70);
+    margin-top: 10px;
+    padding: 20px 15px 30px 25px;
+    h4{
+        color: white;
+        font-family: $police-titre;
+        font-size:larger;
+        padding-bottom: 15px;
+    }
+    & li{
+        padding: 5px 0 5px 0;
+        & a{
+            color: white;
+            & i{
+                padding-right: 10px;
+            }
+            &:active{
+                color:$primary;
+            }
+        }
+        & .partner i{
+            font-size: small;
+            padding-right: 8px;
+        }
+    }
+}

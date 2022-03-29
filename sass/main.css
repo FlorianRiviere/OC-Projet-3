@@ -45,6 +45,10 @@ td, th {
   padding: 0;
 }
 
+* a {
+  text-decoration: none;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
 }
@@ -104,5 +108,39 @@ header img {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+footer {
+  background-color: #464646;
+  margin-top: 10px;
+  padding: 20px 15px 30px 25px;
+}
+
+footer h4 {
+  color: white;
+  font-family: "Shrikhand";
+  font-size: larger;
+  padding-bottom: 15px;
+}
+
+footer li {
+  padding: 5px 0 5px 0;
+}
+
+footer li a {
+  color: white;
+}
+
+footer li a i {
+  padding-right: 10px;
+}
+
+footer li a:active {
+  color: #9356DC;
+}
+
+footer li .partner i {
+  font-size: small;
+  padding-right: 8px;
 }
 /*# sourceMappingURL=main.css.map */
