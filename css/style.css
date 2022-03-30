@@ -148,7 +148,7 @@ footer li .partner i {
   width: 100%;
   height: 100%;
   border: none;
-  background-color: #ededed;
+  background-color: #ebebeb;
   box-shadow: 0px 1px 3px #a6a6a6 inset;
   text-align: center;
   font-weight: 600;
@@ -186,7 +186,7 @@ footer li .partner i {
 }
 
 nav {
-  background-color: #fafafa;
+  background-color: whitesmoke;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -203,6 +203,86 @@ nav h1 {
 nav p {
   font-size: large;
   color: gray;
+}
+
+.functioning {
+  width: 100%;
+  height: 400px;
+  padding: 20px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (min-width: 1280px) {
+  .functioning {
+    height: 250px;
+  }
+}
+.functioning h2 {
+  font-size: x-large;
+  font-weight: 700;
+  margin: 20px 0 20px 0;
+}
+.functioning .funct-cards {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 1280px) {
+  .functioning .funct-cards {
+    justify-content: space-around;
+  }
+}
+.functioning .funct-cards a {
+  width: 90%;
+  padding: 25px 0 25px 0;
+  background-color: whitesmoke;
+  border-radius: 20px 20px 20px 20px;
+  box-shadow: 0px 3px 10px #d9d9d9;
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (min-width: 1280px) {
+  .functioning .funct-cards a {
+    width: 30%;
+  }
+}
+.functioning .funct-cards a * {
+  position: relative;
+  left: -15px;
+}
+.functioning .funct-cards a i {
+  color: gray;
+  font-size: larger;
+  align-self: center;
+  margin-left: 30px;
+}
+.functioning .funct-cards a .description {
+  color: #000000;
+  width: 100%;
+  font-size: medium;
+  font-weight: 500;
+  margin-left: 30px;
+  align-self: center;
+}
+.functioning .funct-cards a:hover {
+  background-color: rgba(147, 86, 220, 0.1);
+}
+.functioning .funct-cards a:hover > i {
+  color: #9356DC;
+}
+.functioning .funct-cards a:active {
+  box-shadow: 0px 3px 5px #bc95e9 inset;
+}
+.functioning .funct-cards .number {
+  padding: 3px 8px 3px 8px;
+  border-radius: 20px 20px 20px 20px;
+  background-color: #9356DC;
+  color: #ffffff;
+  align-self: center;
 }
 
 /*# sourceMappingURL=style.css.map */
