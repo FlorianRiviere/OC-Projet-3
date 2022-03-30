@@ -1,0 +1,7 @@
+.btn-rest{
+    background: linear-gradient(to top left, $primary, 55%, $secondary);
+    color: white;
+    padding: 15px 20px 15px 20px;
+    border-radius: 30px 30px 30px 30px;
+    box-shadow: 2px 3px 5px darken($color: #ffffff, $amount: 35);
+}
