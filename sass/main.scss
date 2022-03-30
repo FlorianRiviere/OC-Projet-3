@@ -2,9 +2,10 @@
 @import "utils/breakpoints";
 
 @import "base/reset";
-@import "base/police";
+@import "base/font";
+@import "base/body";
 
 @import "layout/header";
-@import "layout/footer"
+@import "layout/footer";
 
-
+@import "pages/home";
