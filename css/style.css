@@ -137,7 +137,6 @@ main {
 
 .background-pg {
   background-image: url(../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
-  background-image: url(../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -157,7 +156,6 @@ main {
 
 .background-ne {
   background-image: url(../../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
-  background-image: url(../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -177,7 +175,6 @@ main {
 
 .background-af {
   background-image: url(../../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-  background-image: url(../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -197,7 +194,6 @@ main {
 
 .background-ds {
   background-image: url(../../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-  background-image: url(../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -238,7 +234,16 @@ main {
   }
 }
 
-.starter, .dish, .dessert {
+.menu-ne {
+  height: 1170px;
+}
+@media screen and (min-width: 1024px) {
+  .menu-ne {
+    height: 620px;
+  }
+}
+
+.starter, .dessert, .dish {
   width: 100%;
   height: 250px;
   display: flex;
@@ -246,13 +251,25 @@ main {
   justify-content: space-between;
   align-content: space-between;
 }
-.starter h2, .dish h2, .dessert h2 {
-  border-bottom: solid #99E2D0;
+.starter h2, .dessert h2, .dish h2 {
+  width: 100%;
 }
 @media screen and (min-width: 1024px) {
-  .starter, .dish, .dessert {
+  .starter, .dessert, .dish {
     width: 31%;
   }
+}
+
+.starter-ne {
+  height: 330px;
+}
+
+.border {
+  border-top: solid;
+  border-top-color: #99E2D0;
+  width: 40px;
+  position: relative;
+  bottom: 3px;
 }
 
 .menu-card {
@@ -443,9 +460,10 @@ nav p {
 
 .restaurants {
   width: 100%;
-  padding: 0 20px 20px 20px;
+  padding: 0 20px 50px 20px;
   display: flex;
   flex-wrap: wrap;
+  background-color: whitesmoke;
 }
 .restaurants h2 {
   font-size: x-large;

@@ -42,6 +42,12 @@ main{
         height: 550px;
     }
 }
+.menu-ne{
+    height: 1170px;
+    @include tablet-landscape{
+        height: 620px;
+    }
+}
 
 .starter{
     width: 100%;
@@ -51,12 +57,24 @@ main{
     justify-content: space-between;
     align-content: space-between;
     & h2{
-        border-bottom: solid $tertiary;
+        width: 100%;
     }
     @include tablet-landscape{
         width: 31%;
     }
 }
+.starter-ne{
+    height: 330px;
+}
+
+.border{
+    border-top: solid;
+    border-top-color: $tertiary;
+    width: 40px;
+    position: relative;
+    bottom: 3px;
+}
+
 .menu-card{
     background-color: #ffffff;
     width: 100%;
@@ -95,7 +113,7 @@ main{
 }
 
 .dessert{
-    @extend .dish;
+    @extend .starter;
 }
 
 .button{
