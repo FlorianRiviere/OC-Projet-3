@@ -76,33 +76,50 @@ body {
   background-color: #99E2D0;
   border-radius: 2px;
   position: relative;
-  bottom: 220px;
-  left: 85%;
+  bottom: 250px;
+  left: 70%;
 }
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 350px) {
   .rest-cards .new {
     left: 60%;
   }
 }
+@media screen and (min-width: 450px) {
+  .rest-cards .new {
+    left: 75%;
+  }
+}
 @media screen and (min-width: 640px) {
   .rest-cards .new {
-    left: 100%;
+    left: 80%;
   }
 }
 @media screen and (min-width: 768px) {
   .rest-cards .new {
-    left: 85%;
+    left: 70%;
   }
 }
 @media screen and (min-width: 1024px) {
   .rest-cards .new {
-    left: 100%;
+    left: 80%;
   }
 }
 @media screen and (min-width: 1280px) {
   .rest-cards .new {
-    left: 85%;
+    left: 70%;
   }
+}
+
+.rest-description .fa-heart {
+  font-size: x-large;
+  position: relative;
+  bottom: 30px;
+  left: 90%;
+}
+
+.menu .fa-heart {
+  font-size: x-large;
+  margin: 5px 10px 0 0;
 }
 
 header {
@@ -263,7 +280,7 @@ main {
   align-content: space-between;
 }
 .menu h1 {
-  width: 100%;
+  width: 80%;
   font-family: "shrikhand";
   font-size: x-large;
 }
@@ -554,7 +571,7 @@ nav p {
 
 .rest-description {
   padding: 15px 15px 15px 15px;
-  width: 80%;
+  width: 100%;
 }
 .rest-description h3 {
   color: black;

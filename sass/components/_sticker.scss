@@ -8,22 +8,25 @@
     background-color: #99E2D0;
     border-radius: 2px; 
     position: relative;
-    bottom: 220px;
-    left: 85%;
+    bottom: 250px;
+    left: 70%;
 
-    @media screen and (max-width:300px) {
+    @media screen and (max-width:350px) {
         left: 60%
     }
+    @media screen and (min-width:450px) {
+        left: 75%;
+    }
     @include mobile-landscape{
-        left: 100%;
+        left: 80%;
     }
     @include tablet-portrait{
-        left: 85%;
+        left: 70%;
     }
     @include tablet-landscape{
-        left: 100%;
+        left: 80%;
     }
     @include desktop-only{
-        left: 85%;
+        left: 70%;
     }
 }

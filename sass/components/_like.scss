@@ -1,0 +1,15 @@
+.rest-description{
+    & .fa-heart{
+        font-size: x-large;
+        position: relative;
+        bottom: 30px;
+        left: 90%;
+    }
+}
+
+.menu{
+    & .fa-heart{
+        font-size: x-large;
+        margin: 5px 10px 0 0;
+    }
+}
