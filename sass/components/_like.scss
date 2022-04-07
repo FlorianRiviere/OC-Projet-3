@@ -8,54 +8,49 @@
     
     & .fa-heart{
         font-size: x-large;
-        background: -webkit-linear-gradient(top, $primary, $secondary);
-        background-clip:text;
-        -webkit-background-clip: text;
         color: transparent;
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: black;
     }
     &:focus > .fa-heart{
-        
         -webkit-text-stroke-width: 0px;
+        animation: like 0.5s linear forwards;
     }
     
 }
 
-.empty-heart {
-    overflow: hidden;
-    position: relative;
-    
-    & .fa-heart{
-        font-size: x-large;
-        margin: 5px 5px -5px 1px;
-        color: transparent;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: black;
-    }
-}
 
-.full-heart{
+.menu a{
     overflow: hidden;
     position: relative;
     z-index: 1;
     & .fa-heart{
         font-size: x-large;
         margin: 5px 5px -5px 1px;
-        background-image: -webkit-linear-gradient(top, $primary, $secondary);
-        background-clip:text;
-        -webkit-background-clip: text;
         color: transparent;
-        opacity: 0;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
     }
     &:focus > .fa-heart{
-        opacity: 1;
-    }
-    &:focus + .empty-heart{
-        opacity: 0;
+        -webkit-text-stroke-width: 0px;
+        animation: like 0.5s linear forwards;
     }
 }
 
-@keyframes like {
-    
+@keyframes like{
+    from{transform: scale(1.01);
+        background: -webkit-linear-gradient(top, $primary, $secondary);
+        background-clip:text;
+        -webkit-background-clip: text;
+        color: transparent;
+        background-repeat: no-repeat;
+        background-position-y: 25px;}
+
+    to{ transform: scale(1.01);
+        background: -webkit-linear-gradient(top, $primary, $secondary);
+        background-clip:text;
+        -webkit-background-clip: text;
+        color: transparent;
+        background-repeat: no-repeat;
+        background-position-y: 0;}
 }
