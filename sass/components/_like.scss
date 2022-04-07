@@ -2,8 +2,8 @@
     width: 24px;
     height: 24px;
     position: relative;
-    bottom: 50px;
     padding: 0;
+    bottom: 50px;
     left: 85%;
 
     & .fa-heart{
@@ -14,16 +14,21 @@
     }
     &:focus > .fa-heart{
         -webkit-text-stroke-width: 0px;
-        animation: like 0.5s linear forwards;
+        animation: like 0.2s linear forwards;
     }
-    &:focus + .restcards:active{
-        background-color: white;
+    
+    
+    @include desktop-only{
+        &:hover > .fa-heart{
+            -webkit-text-stroke-width: 0px;
+            animation: like 0.2s linear forwards;
+        }
     }
     
 }
 
 
-.menu a{
+.menu button{
     overflow: hidden;
     position: relative;
     z-index: 1;
@@ -36,7 +41,13 @@
     }
     &:focus > .fa-heart{
         -webkit-text-stroke-width: 0px;
-        animation: like 0.5s linear forwards;
+        animation: like 0.2s linear forwards;
+    }
+    @include desktop-only{
+        &:hover > .fa-heart{
+            -webkit-text-stroke-width: 0px;
+            animation: like 0.2s linear forwards;
+        }
     }
 }
 

@@ -34,8 +34,11 @@
         @include desktop-only{
             left: 43%;
         }
-        &:active{
+        &:hover{
             color: $primary;
+        }
+        &:active{
+            color: $secondary;
         }
     }
 }
