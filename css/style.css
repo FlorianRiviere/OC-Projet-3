@@ -51,9 +51,15 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
 body {
   display: flex;
   flex-wrap: wrap;
+  height: 100%;
 }
 
 .btn {
@@ -135,45 +141,57 @@ body {
   -webkit-text-stroke-width: 0px;
 }
 
-.menu a .fa-heart {
+.empty-heart {
+  overflow: hidden;
+  position: relative;
+}
+.empty-heart .fa-heart {
   font-size: x-large;
-  margin: 5px 10px 0 0;
-  background: -webkit-linear-gradient(top, #9356DC, #FF79DA);
-  background-clip: text;
-  -webkit-background-clip: text;
+  margin: 5px 5px -5px 1px;
   color: transparent;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: black;
-  background: transparent;
-}
-.menu a:focus > .fa-heart {
-  background: currentColor;
-  -webkit-text-stroke-width: 0px;
 }
 
+.full-heart {
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.full-heart .fa-heart {
+  font-size: x-large;
+  margin: 5px 5px -5px 1px;
+  background-image: -webkit-linear-gradient(top, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 0;
+}
+.full-heart:focus > .fa-heart {
+  opacity: 1;
+}
+.full-heart:focus + .empty-heart {
+  opacity: 0;
+}
+
+@keyframes like {}
 .section-loader {
   width: 100%;
   height: 100%;
   background-color: rgba(255, 255, 255, 0.781);
   position: absolute;
+  z-index: 1;
+  animation: loader 0.1s 3s forwards;
 }
-.section-loader .loader {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.section-loader .loader .load-circle-primary {
+.section-loader .load-circle-primary {
   height: 50px;
   width: 50px;
   border: 10px solid #9356DC;
+  position: fixed;
+  top: 50%;
+  left: 50%;
   border-radius: 50px;
-  animation: spin 2s linear 3;
-}
-.section-loader .loader p {
-  color: #9356DC;
-  margin-left: 20px;
+  animation: spin 1.5s linear 2 forwards;
 }
 
 @keyframes spin {
@@ -211,6 +229,22 @@ body {
   }
   100% {
     border-color: white;
+  }
+}
+@keyframes loader {
+  from {
+    z-index: 1;
+  }
+  to {
+    z-index: -1;
+  }
+}
+@keyframes opacity {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
 header {
@@ -270,8 +304,11 @@ footer li a {
 footer li a i {
   padding-right: 10px;
 }
-footer li a:active {
+footer li a:hover {
   color: #9356DC;
+}
+footer li a:active {
+  color: #FF79DA;
 }
 footer li .partner i {
   font-size: small;
@@ -443,8 +480,8 @@ main {
   font-weight: 700;
 }
 .menu-card .plate .details {
-  width: 80%;
-  height: 22.5px;
+  width: 85%;
+  height: 25px;
   padding-top: 5px;
   color: #666666;
   white-space: nowrap;
@@ -477,6 +514,12 @@ main {
 }
 .menu-card:hover > .validation > i {
   animation: check 0.6s;
+}
+.menu-card:focus > .plate {
+  width: 80%;
+}
+.menu-card:focus > .validation {
+  width: 15%;
 }
 
 .menu-1 {
@@ -624,7 +667,7 @@ nav p {
     justify-content: space-around;
   }
 }
-.functioning .funct-cards a {
+.functioning .funct-cards .steps {
   width: 90%;
   padding: 25px 0 25px 0;
   background-color: whitesmoke;
@@ -634,21 +677,21 @@ nav p {
   justify-content: space-between;
 }
 @media screen and (min-width: 1280px) {
-  .functioning .funct-cards a {
+  .functioning .funct-cards .steps {
     width: 30%;
   }
 }
-.functioning .funct-cards a * {
+.functioning .funct-cards .steps * {
   position: relative;
   left: -15px;
 }
-.functioning .funct-cards a i {
+.functioning .funct-cards .steps i {
   color: gray;
   font-size: larger;
   align-self: center;
   margin-left: 30px;
 }
-.functioning .funct-cards a .funct-description {
+.functioning .funct-cards .steps .funct-description {
   color: #000000;
   width: 100%;
   font-size: medium;
@@ -656,14 +699,11 @@ nav p {
   margin-left: 30px;
   align-self: center;
 }
-.functioning .funct-cards a:hover {
+.functioning .funct-cards .steps:hover {
   background-color: rgba(147, 86, 220, 0.1);
 }
-.functioning .funct-cards a:hover > i {
+.functioning .funct-cards .steps:hover > i {
   color: #9356DC;
-}
-.functioning .funct-cards a:active {
-  box-shadow: 0px 3px 5px #bc95e9 inset;
 }
 .functioning .funct-cards .number {
   padding: 3px 8px 3px 8px;
@@ -712,6 +752,7 @@ nav p {
   display: flex;
   flex-direction: column;
   border-radius: 20px 20px 20px 20px;
+  transition: scale(1.05) 1s;
 }
 .rest-cards .cards-link {
   width: 100%;
@@ -727,6 +768,12 @@ nav p {
   .rest-cards {
     width: 23%;
   }
+}
+.rest-cards:hover {
+  transform: scale(1.05);
+}
+.rest-cards:active {
+  background-color: rgba(147, 86, 220, 0.1);
 }
 
 .rest-description {

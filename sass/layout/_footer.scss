@@ -15,8 +15,11 @@ footer{
             & i{
                 padding-right: 10px;
             }
-            &:active{
+            &:hover{
                 color:$primary;
+            }
+            &:active{
+                color: $secondary;
             }
         }
         & .partner i{
