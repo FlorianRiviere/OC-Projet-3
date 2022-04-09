@@ -2,6 +2,9 @@ main{
     width: 100%;
 }
 
+
+/* Background */
+
 .background-pg{
     background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
     @include background;
@@ -21,6 +24,9 @@ main{
     background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
     @include background;
 }
+
+
+/* Menu part */
 
 .menu{
     margin-top: -55px;
@@ -51,6 +57,9 @@ main{
     }
 }
 
+
+/* Starter */
+
     .starter{
         width: 100%;
         height: 250px;
@@ -77,6 +86,9 @@ main{
         position: relative;
         bottom: 3px;
     }
+
+
+/* Cards */
 
         .menu-card{
             background-color: #ffffff;
@@ -198,6 +210,10 @@ main{
             100%{transform: rotate(0deg);}
 
         }
+
+
+        
+/* Dish, desserts and command button */
 
     .dish{
         @extend .starter;

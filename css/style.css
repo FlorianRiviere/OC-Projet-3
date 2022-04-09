@@ -128,6 +128,7 @@ button {
   }
 }
 
+/* Home */
 .like {
   width: 24px;
   height: 24px;
@@ -153,6 +154,7 @@ button {
   }
 }
 
+/* Restaurants */
 .menu button {
   overflow: hidden;
   position: relative;
@@ -202,61 +204,129 @@ button {
   background-color: rgba(255, 255, 255, 0.781);
   position: absolute;
   z-index: 1;
-  animation: loader 0.1s 3s forwards;
+  animation: loader 3s forwards;
 }
-.section-loader .load-circle {
+.section-loader .load-circle-top {
   height: 50px;
   width: 50px;
-  border: 10px solid #9356DC;
+  border: 10px solid transparent;
+  border-top-color: #9356DC;
   position: fixed;
   top: 50%;
   left: 50%;
   border-radius: 50px;
-  animation: spin 1.5s linear 2 forwards;
+  animation: spin-top 1.5s linear 2 both;
+}
+.section-loader .load-circle-right {
+  height: 50px;
+  width: 50px;
+  border: 10px solid transparent;
+  border-right-color: #FF79DA;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  border-radius: 50px;
+  animation: spin-right 1.5s linear 2 both;
+}
+.section-loader .load-circle-bottom {
+  height: 50px;
+  width: 50px;
+  border: 10px solid transparent;
+  border-bottom-color: #9356DC;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  border-radius: 50px;
+  animation: spin-bottom 1.5s linear 2 both;
+}
+.section-loader .load-circle-left {
+  height: 50px;
+  width: 50px;
+  border: 10px solid transparent;
+  border-left-color: #99E2D0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  border-radius: 50px;
+  animation: spin-left 1.5s linear 2 both;
 }
 
-@keyframes spin {
+@keyframes spin-top {
   0% {
     transform: rotate(0deg);
-    border-color: rgba(255, 255, 255, 0);
-  }
-  12.5% {
-    transform: rotate(90deg);
-    border-top-color: #9356DC;
-    border-right-color: rgba(255, 255, 255, 0);
-    border-bottom-color: rgba(255, 255, 255, 0);
-    border-left-color: rgba(255, 255, 255, 0);
-  }
-  25% {
-    transform: rotate(180deg);
-    border-top-color: #9356DC;
-    border-right-color: #FF79DA;
-    border-bottom-color: rgba(255, 255, 255, 0);
-    border-left-color: rgba(255, 255, 255, 0);
-  }
-  37.5% {
-    transform: rotate(270deg);
-    border-top-color: #9356DC;
-    border-right-color: #FF79DA;
-    border-bottom-color: #9356DC;
-    border-left-color: rgba(255, 255, 255, 0);
+    opacity: 0;
   }
   50% {
     transform: rotate(360deg);
-    border-top-color: #9356DC;
-    border-right-color: #FF79DA;
-    border-bottom-color: #9356DC;
-    border-left-color: #99E2D0;
+    opacity: 1;
   }
   100% {
-    border-color: rgba(255, 255, 255, 0);
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+}
+@keyframes spin-right {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  12.5% {
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+  50% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+}
+@keyframes spin-bottom {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  25% {
+    transform: rotate(180deg);
+    opacity: 0;
+  }
+  50% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+}
+@keyframes spin-left {
+  0% {
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  37.5% {
+    transform: rotate(270deg);
+    opacity: 0;
+  }
+  50% {
+    transform: rotate(360deg);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(0deg);
+    opacity: 0;
   }
 }
 @keyframes loader {
-  from {
+  0% {
     z-index: 1;
   }
-  to {
+  99% {
+    z-index: 1;
+  }
+  100% {
     z-index: -1;
   }
 }
@@ -332,6 +402,7 @@ main {
   width: 100%;
 }
 
+/* Background */
 .background-pg {
   background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   background-repeat: no-repeat;
@@ -408,6 +479,7 @@ main {
   }
 }
 
+/* Menu part */
 .menu {
   margin-top: -55px;
   width: 100%;
@@ -440,6 +512,7 @@ main {
   }
 }
 
+/* Starter */
 .starter, .dessert, .dish {
   width: 100%;
   height: 250px;
@@ -469,6 +542,7 @@ main {
   bottom: 3px;
 }
 
+/* Cards */
 .menu-card {
   background-color: #ffffff;
   width: 100%;
@@ -590,6 +664,7 @@ main {
     transform: rotate(0deg);
   }
 }
+/* Dish, desserts and command button */
 .button {
   width: 100%;
   height: 50px;
