@@ -560,14 +560,14 @@ main {
 }
 .menu-card .plate {
   width: 100%;
-  height: 65px;
+  height: 55px;
   margin: 10px 10px 10px 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 .menu-card .plate h3 {
-  width: 85%;
+  width: 100%;
   font-weight: 700;
   color: #000000;
 }
