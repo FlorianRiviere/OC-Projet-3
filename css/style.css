@@ -137,45 +137,56 @@ button {
   bottom: 50px;
   left: 85%;
 }
-.like .fa-heart {
-  font-size: x-large;
-  color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+.like input {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
-.like:focus > .fa-heart {
+.like input:checked + .fa-heart {
   -webkit-text-stroke-width: 0px;
   animation: like 0.2s linear forwards;
 }
 @media screen and (min-width: 1280px) {
-  .like:hover > .fa-heart {
+  .like input:hover + .fa-heart {
     -webkit-text-stroke-width: 0px;
     animation: like 0.2s linear forwards;
   }
+}
+.like .fa-heart {
+  font-size: x-large;
+  position: absolute;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
 /* Restaurants */
-.menu button {
-  overflow: hidden;
+.menu-like {
+  width: 24px;
+  height: 24px;
   position: relative;
-  z-index: 1;
 }
-.menu button .fa-heart {
-  font-size: x-large;
-  margin: 5px 5px -5px 1px;
-  color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+.menu-like input {
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
-.menu button:focus > .fa-heart {
+.menu-like input:checked + .fa-heart {
   -webkit-text-stroke-width: 0px;
   animation: like 0.2s linear forwards;
 }
 @media screen and (min-width: 1280px) {
-  .menu button:hover > .fa-heart {
+  .menu-like input:hover + .fa-heart {
     -webkit-text-stroke-width: 0px;
     animation: like 0.2s linear forwards;
   }
+}
+.menu-like .fa-heart {
+  font-size: x-large;
+  position: absolute;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
 }
 
 @keyframes like {

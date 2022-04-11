@@ -8,24 +8,33 @@
     bottom: 50px;
     left: 85%;
 
+    & input{
+        opacity: 0;
+        width: 0;
+        height: 0;
+        &:checked + .fa-heart{
+            -webkit-text-stroke-width: 0px;
+            animation: like 0.2s linear forwards;
+        }
+        @include desktop-only{
+            &:hover + .fa-heart{
+                -webkit-text-stroke-width: 0px;
+                animation: like 0.2s linear forwards;
+            }
+        }
+    }
+
     & .fa-heart{
         font-size: x-large;
+        position: absolute;
         color: transparent;
         -webkit-text-stroke-width: 1px;
         -webkit-text-stroke-color: black;
     }
-    &:focus > .fa-heart{
-        -webkit-text-stroke-width: 0px;
-        animation: like 0.2s linear forwards;
-    }
     
     
-    @include desktop-only{
-        &:hover > .fa-heart{
-            -webkit-text-stroke-width: 0px;
-            animation: like 0.2s linear forwards;
-        }
-    }
+    
+    
     
 }
 
@@ -33,26 +42,33 @@
 
 /* Restaurants */
 
-.menu button{
-    overflow: hidden;
+.menu-like{
+    width: 24px;
+    height: 24px;
     position: relative;
-    z-index: 1;
-    & .fa-heart{
-        font-size: x-large;
-        margin: 5px 5px -5px 1px;
-        color: transparent;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: black;
-    }
-    &:focus > .fa-heart{
-        -webkit-text-stroke-width: 0px;
-        animation: like 0.2s linear forwards;
-    }
-    @include desktop-only{
-        &:hover > .fa-heart{
+    
+    & input{
+        opacity: 0;
+        width: 0;
+        height: 0;
+        &:checked + .fa-heart{
             -webkit-text-stroke-width: 0px;
             animation: like 0.2s linear forwards;
         }
+        @include desktop-only{
+            &:hover + .fa-heart{
+                -webkit-text-stroke-width: 0px;
+                animation: like 0.2s linear forwards;
+            }
+        }
+    }
+
+    & .fa-heart{
+        font-size: x-large;
+        position: absolute;
+        color: transparent;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
     }
 }
 
