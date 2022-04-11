@@ -560,20 +560,20 @@ main {
 }
 .menu-card .plate {
   width: 100%;
+  height: 65px;
   margin: 10px 10px 10px 10px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 .menu-card .plate h3 {
-  width: 100%;
+  width: 85%;
   font-weight: 700;
   color: #000000;
 }
 .menu-card .plate .details {
   width: 85%;
   height: 25px;
-  padding-top: 5px;
   color: #666666;
   white-space: nowrap;
   overflow: hidden;
@@ -584,7 +584,7 @@ main {
   color: #000000;
   font-weight: 700;
 }
-.menu-card .validation {
+.menu-card .checkbox {
   height: 100%;
   width: 0%;
   border-radius: 0 20px 20px 0;
@@ -594,37 +594,17 @@ main {
   font-size: x-large;
   color: #ffffff;
 }
-.menu-card:focus > .plate {
+.menu-card:hover > .plate {
   width: 80%;
   transition: width 0.6s;
 }
-.menu-card:focus > .validation {
+.menu-card:hover > .checkbox {
   width: 15%;
   transition: width 0.6s;
   transition-delay: 0.1s;
 }
-.menu-card:focus > .validation > i {
+.menu-card:hover > .checkbox > i {
   animation: check 0.6s;
-}
-@media screen and (min-width: 1280px) {
-  .menu-card:hover > .plate {
-    width: 80%;
-    transition: width 0.6s;
-  }
-  .menu-card:hover > .validation {
-    width: 15%;
-    transition: width 0.6s;
-    transition-delay: 0.1s;
-  }
-  .menu-card:hover > .validation > i {
-    animation: check 0.6s;
-  }
-  .menu-card:focus > .plate {
-    width: 80%;
-  }
-  .menu-card:focus > .validation {
-    width: 15%;
-  }
 }
 
 .menu-1 {
@@ -871,6 +851,9 @@ nav p {
   height: 100%;
   border-radius: 20px 20px 20px 20px;
 }
+.rest-cards .cards-link:active {
+  background-color: rgba(147, 86, 220, 0.1);
+}
 @media screen and (min-width: 768px) {
   .rest-cards {
     width: 48%;
@@ -880,13 +863,10 @@ nav p {
   .rest-cards {
     width: 23%;
   }
-}
-.rest-cards:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 5px 15px #d9d9d9;
-}
-.rest-cards:active {
-  background-color: rgba(147, 86, 220, 0.1);
+  .rest-cards:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px #d9d9d9;
+  }
 }
 
 .rest-description {
