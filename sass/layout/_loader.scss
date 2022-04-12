@@ -12,10 +12,11 @@
         border: 10px solid transparent;
         border-top-color: $primary;
         position: fixed;
-        top: 45%;
-        left: 45%;
+        top: 50%;
+        left: 50%;
         border-radius: 50px;
         animation: spin-top 1.5s linear 2 both;
+        
     }
     .load-circle-right{
         height: 50px;
@@ -23,8 +24,8 @@
         border: 10px solid transparent;
         border-right-color: $secondary;
         position: fixed; 
-        top: 45%;
-        left: 45%;
+        top: 50%;
+        left: 50%;
         border-radius: 50px;
         animation: spin-right 1.5s linear 2 both;
     }
@@ -34,8 +35,8 @@
         border: 10px solid transparent;
         border-bottom-color: $primary;
         position: fixed;
-        top: 45%;
-        left: 45%;
+        top: 50%;
+        left: 50%;
         border-radius: 50px;
         animation: spin-bottom 1.5s linear 2 both;
     }
@@ -45,35 +46,35 @@
         border: 10px solid transparent;
         border-left-color: $tertiary;
         position: fixed;
-        top: 45%;
-        left: 45%;
+        top: 50%;
+        left: 50%;
         border-radius: 50px;
         animation: spin-left 1.5s linear 2 both;
     }
 }
 
 @keyframes spin-top {
-    0%{transform: rotate(0deg);opacity: 0;}
-    50%{transform: rotate(360deg);opacity: 1;}
-    100%{transform: rotate(0deg);opacity: 0;}
+    0%{transform: translate(-50%,-50%) rotate(0deg);opacity: 0;}
+    50%{transform: translate(-50%,-50%) rotate(360deg);opacity: 1;}
+    100%{transform: translate(-50%,-50%) rotate(0deg);opacity: 0;}
 }
 @keyframes spin-right {
-    0%{transform: rotate(0deg);opacity: 0;}
-    12.5%{transform: rotate(90deg);opacity: 0;}
-    50%{transform: rotate(360deg);opacity: 1;}
-    100%{transform: rotate(0deg);opacity: 0;}
+    0%{transform: translate(-50%,-50%) rotate(0deg);opacity: 0;}
+    12.5%{transform: translate(-50%,-50%) rotate(90deg);opacity: 0;}
+    50%{transform: translate(-50%,-50%) rotate(360deg);opacity: 1;}
+    100%{transform: translate(-50%,-50%) rotate(0deg);opacity: 0;}
 }
 @keyframes spin-bottom {
-    0%{transform: rotate(0deg);opacity: 0;}
-    25%{transform: rotate(180deg);opacity: 0;}
-    50%{transform: rotate(360deg);opacity: 1;}
-    100%{transform: rotate(0deg);opacity: 0;}
+    0%{transform: translate(-50%,-50%) rotate(0deg);opacity: 0;}
+    25%{transform: translate(-50%,-50%) rotate(180deg);opacity: 0;}
+    50%{transform: translate(-50%,-50%) rotate(360deg);opacity: 1;}
+    100%{transform: translate(-50%,-50%) rotate(0deg);opacity: 0;}
 }
 @keyframes spin-left {
-    0%{transform: rotate(0deg);opacity: 0;}
-    37.5%{transform: rotate(270deg);opacity: 0;}
-    50%{transform: rotate(360deg);opacity: 1;}
-    100%{transform: rotate(0deg);opacity: 0;}
+    0%{transform: translate(-50%,-50%) rotate(0deg);opacity: 0;}
+    37.5%{transform: translate(-50%,-50%) rotate(270deg);opacity: 0;}
+    50%{transform: translate(-50%,-50%) rotate(360deg);opacity: 1;}
+    100%{transform: translate(-50%,-50%) rotate(0deg);opacity: 0;}
 }
 
 @keyframes loader {
