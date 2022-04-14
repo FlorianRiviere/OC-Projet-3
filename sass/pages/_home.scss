@@ -34,7 +34,7 @@
             }
         }
 
-        & input[type="search"]{
+        & input[type="text"]{
             width: 80%;
             height: 100%;
             border: none;
@@ -48,16 +48,6 @@
 
             &:focus{
                 outline: none;
-            }
-
-            &::-webkit-search-cancel-button{
-                -webkit-appearance: none;
-                height: 12px;
-                width: 12px;
-                background-image: url(../../images/icon/iconmonstr-x-mark-9-12.png);
-                background-repeat: no-repeat;
-                background-size: 12px;
-                cursor: pointer;
             }
         }
     }
